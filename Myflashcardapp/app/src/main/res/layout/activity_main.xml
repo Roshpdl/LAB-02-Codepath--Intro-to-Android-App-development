@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/flashcard_question_textview"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:gravity="center"
+        android:text="Who is the 44th president of the united states?"
+        android:background="@drawable/card_background"
+        android:elevation = "7dp"
+        android:textSize="30sp" />
+    <!--centerVertical and centerHorizontal center the "objects in the screen" whereas gravity centers the text-->
+
+    <TextView
+        android:id="@+id/flashcard_answer_textview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility = "visible"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/ansbackground"
+        android:text="Barack Obama"
+        android:textSize="20sp" />
+
+    <TextView
+        android:id="@+id/flashcard_wronganswer1_textview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="false"
+        android:layout_marginTop="300dp"
+        android:background="@drawable/ansbackground"
+        android:gravity="center"
+        android:text="Bill Clinton"
+        android:textSize="20sp"
+        android:visibility="visible" />
+    <TextView
+        android:id="@+id/flashcard_wronganswer2_textview"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_centerVertical="false"
+        android:layout_centerHorizontal="true"
+        android:gravity="center"
+        android:visibility = "visible"
+        android:layout_marginTop="400dp"
+        android:background="@drawable/ansbackground"
+        android:text="George H. W. Bush"
+        android:textSize="20sp" />
+
+    <ImageView
+        android:id="@+id/toggle_choices_visibility"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="650dp"
+        android:visibility="invisible"
+        android:src="@drawable/eye_icon" />
+
+    <ImageView
+        android:id="@+id/crosstheeye"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="650dp"
+        android:visibility="visible"
+        android:src="@drawable/eye_iconcrossed" />
+
+
+
+</RelativeLayout>
