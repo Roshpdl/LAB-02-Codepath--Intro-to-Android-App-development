@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -9,72 +10,75 @@
         android:id="@+id/flashcard_question_textview"
         android:layout_width="match_parent"
         android:layout_height="150dp"
-        android:layout_centerVertical="false"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
+        android:layout_margin="20dp"
+        android:text="Who is the 44th president of the United States?"
         android:gravity="center"
-        android:text="Who is the 44th president of the united states?"
         android:background="@drawable/card_background"
-        android:elevation = "7dp"
-        android:textSize="30sp" />
-    <!--centerVertical and centerHorizontal center the "objects in the screen" whereas gravity centers the text-->
+        android:textSize="30sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
 
     <TextView
         android:id="@+id/flashcard_answer_textview"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_centerVertical="false"
-        android:layout_centerHorizontal="true"
-        android:gravity="center"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
         android:visibility = "visible"
-        android:layout_marginTop="200dp"
         android:background="@drawable/ansbackground"
+        android:gravity="center"
         android:text="Barack Obama"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flashcard_question_textview"
+        />
 
     <TextView
         android:id="@+id/flashcard_wronganswer1_textview"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="false"
-        android:layout_marginTop="300dp"
+        android:layout_height="80dp"
         android:background="@drawable/ansbackground"
+        android:layout_margin="20dp"
         android:gravity="center"
         android:text="Bill Clinton"
         android:textSize="20sp"
-        android:visibility="visible" />
+        android:visibility="visible"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flashcard_answer_textview"
+        />
     <TextView
         android:id="@+id/flashcard_wronganswer2_textview"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_centerVertical="false"
-        android:layout_centerHorizontal="true"
+        android:layout_height="80dp"
+        android:layout_margin="20dp"
         android:gravity="center"
         android:visibility = "visible"
-        android:layout_marginTop="400dp"
         android:background="@drawable/ansbackground"
         android:text="George H. W. Bush"
-        android:textSize="20sp" />
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/flashcard_wronganswer1_textview"
+        />
 
     <ImageView
         android:id="@+id/toggle_choices_visibility"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="650dp"
-        android:visibility="invisible"
-        android:src="@drawable/eye_icon" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/eye_iconcrossed"
+        android:visibility="visible"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        />
 
     <ImageView
-        android:id="@+id/crosstheeye"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="650dp"
+        android:id="@+id/add_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/add_icon"
         android:visibility="visible"
-        android:src="@drawable/eye_iconcrossed" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
-
-
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
