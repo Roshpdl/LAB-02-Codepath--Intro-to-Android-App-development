@@ -98,15 +98,23 @@ public class MainActivity extends AppCompatActivity {
             flashcardAnswer.setText(firstcard.getAnswer());
         }
 
+        findViewById(R.id.delete_icon_imageview).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                flashcardDatabase.deleteCard(flashcardQuestion.getText().toString());
+                allFlashcards = flashcardDatabase.getAllCards();
+            }
+        });
+
         findViewById(R.id.next_button_imageview).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 if (allFlashcards == null || allFlashcards.size() == 0) {
                     return;
                 }
-                cardIndex +=1;
+                cardIndex += 1;
 
-                if (cardIndex >=allFlashcards.size()) {
+                if (cardIndex >= allFlashcards.size()) {
                     Snackbar.make(view,
                             "You've reached the end of the cards!",
                             Snackbar.LENGTH_SHORT)
