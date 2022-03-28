@@ -12,7 +12,7 @@ LAB03 Assignment
 
 ### App Walk-though
 
-<img src="http://g.recordit.co/OsRFAuDHf6.gif" width=200><br>
+<img src="http://g.recordit.co/lnTA4WQDn0.gif" width=200><br>
 
 
 ## Required
